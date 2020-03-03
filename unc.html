@@ -1,0 +1,182 @@
+<html>
+<head>
+<title>Unit Converter</title>
+<style>
+*
+{
+box-sizing:border-box;
+marigin:0;
+padding:0;
+}
+#cal 
+{
+border: 1px solid #EBF5FB ;
+position:absolute;
+padding:20px;
+border-radius:90px;
+background-color:#EBF5FB;
+top:10%;
+left:30%;
+width:500px;
+font-family:arial;
+}
+#cal2
+{
+border: 1px solid #EBF5FB ;
+position:absolute;
+padding:20px;
+border-radius:90px;
+background-color:#EBF5FB;
+top:10%;
+left:30%;
+width:500px;
+display:none;
+font-family:arial;
+}
+input[type=text] {
+  width: 60%;
+  padding: 30px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  background-color: #80a8ff;
+  color: #e6eeff;
+  font-size:40px; 
+}
+input[type=button] {
+  background-color: #F0B27A;
+  width: 45%;
+  border: none;
+  color: white;
+  padding: 26px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+input[type=submit] {
+  background-color: #F0B27A ;
+  width:23%;
+  border: none;
+  color: white;
+  padding: 26px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+<script>
+function ktop()
+{
+
+var a=parseInt(document.getElementById("val1").value);
+
+var c=a*2.2;
+document.getElementById("val3").value=c;
+}
+
+function mtoy()
+{
+
+var a=parseInt(document.getElementById("val1").value);
+var c=a*1.09361;
+document.getElementById("val3").value=c;
+}
+function ctof()
+{
+
+var a=parseInt(document.getElementById("val1").value);
+var c=a*1.8 + 32;
+document.getElementById("val3").value=c;
+}
+function cl()
+{
+document.getElementById("val1").value="";
+document.getElementById("val3").value="";
+}
+function ch()
+{
+document.getElementById('cal').style.display='none';
+document.getElementById('cal2').style.display='block';
+}
+
+function ch2()
+{
+document.getElementById('cal2').style.display='none';
+document.getElementById('cal').style.display='block';
+}
+
+function ptok()
+{
+var a=parseInt(document.getElementById("val2").value);
+var c=a*0.4535;
+document.getElementById("val4").value=c;
+}
+function ytom()
+{
+var a=parseInt(document.getElementById("val2").value);
+var c=a*0.914;
+document.getElementById("val4").value=c;
+}
+function ftoc()
+{
+var a=parseInt(document.getElementById("val2").value);
+var c=(a-32)/1.8;
+document.getElementById("val4").value=c;
+}
+function cl2()
+{
+document.getElementById("val2").value="";
+document.getElementById("val4").value="";
+}
+
+</script>
+</head>
+<body>
+<center><div id="cal" class="header">
+  <h2 style="margin:5px">Unit Converter</h2>
+  <input type="text" id="val1" placeholder="Value">
+  <br>
+  <img src="https://cdn3.iconfinder.com/data/icons/e-commerce-35/74/money_conversion-512.png" style="width:100px;height:100px;">
+  <br>
+  <input type="text" id="val3" placeholder="Output">
+  <br>
+  <br>
+  <input type=button value="Kilo to pound" onclick="ktop()">
+<br>
+  <br>
+<input type=button value="Meter to yards" onclick="mtoy()">
+<input type=button value="Celcius to Farenheit" onclick="ctof()" >
+<br>
+<br>
+<input type=submit value="Change" onclick="ch()">
+<input type=submit value="Clear" onclick="cl()">
+<br>
+<br>
+</div></center>
+
+
+
+
+
+
+<center><div id="cal2" class="header">
+  <h2 style="margin:5px">Unit Converter</h2>
+  <input type="text" id="val2" placeholder="Value">
+  <br>
+  <img src="https://cdn3.iconfinder.com/data/icons/e-commerce-35/74/money_conversion-512.png" style="width:100px;height:100px;">
+  <br>
+  <input type="text" id="val4" placeholder="Output">
+  <br>
+  <br>
+  <input type=button value="Pound to kilos" onclick="ptok()">
+<input type=button value="Yards to meter" onclick="ytom()">
+<input type=button value="Farenheit to celcius" onclick="ftoc()" >
+<br>
+<br>
+<input type=submit value="Change" onclick="ch2()">
+<input type=submit value="Clear" onclick="cl2()">
+<br>
+<br>
+</div></center>
+</body>
+</html>
